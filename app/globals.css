@@ -42,20 +42,22 @@ h2 {
 
 .btn {
   @apply px-3 py-1 rounded-lg font-medium text-white;
-  @apply disabled:bg-slate-300 disabled:hover:bg-slate-300;
+  @apply disabled:bg-slate-300 disabled:hover:bg-slate-300 focus:outline-none;
+  @apply focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black;
 }
 
 .btn-orange {
-  @apply btn bg-hd-orange-400 hover:bg-hd-orange-500 focus:bg-hd-orange-500
+  @apply btn bg-hd-orange-400 hover:bg-hd-orange-500 focus:bg-hd-orange-500;
 }
 
 .btn-darkblue {
-  @apply btn bg-hd-darkblue-400 hover:bg-hd-darkblue-600 focus:bg-hd-darkblue-600
+  @apply btn bg-hd-darkblue-400 hover:bg-hd-darkblue-600 focus:bg-hd-darkblue-600;
 }
 
 .listbox-button {
   @apply flex items-center justify-between w-full h-10 rounded-lg bg-white py-2 px-3 shadow-md sm:text-sm; 
-  @apply focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-hd-orange-400 ;
+  @apply focus:outline-none focus-visible:border-x-hd-darkblue-600 focus-visible:ring-2;
+  @apply  focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-hd-orange-400;
 }
 
 .custom-card {
