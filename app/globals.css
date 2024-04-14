@@ -4,8 +4,8 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 255,255,255;
+  --background-end-rgb: 217, 242, 255;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +30,48 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+h1 {
+  @apply font-bold text-5xl
+}
+
+h2 {
+  @apply font-bold text-xl
+}
+
+.btn {
+  @apply px-3 py-1 rounded-lg font-medium text-white;
+  @apply disabled:bg-slate-300 disabled:hover:bg-slate-300;
+}
+
+.btn-orange {
+  @apply btn bg-hd-orange-400 hover:bg-hd-orange-500 focus:bg-hd-orange-500
+}
+
+.btn-darkblue {
+  @apply btn bg-hd-darkblue-400 hover:bg-hd-darkblue-600 focus:bg-hd-darkblue-600
+}
+
+.listbox-button {
+  @apply flex items-center justify-between w-full h-10 rounded-lg bg-white py-2 px-3 shadow-md sm:text-sm; 
+  @apply focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-hd-orange-400 ;
+}
+
+.custom-card {
+  @apply flex flex-col justify-between gap-5 min-w-[min(600px,95vw)] sm:min-h-[200px] min-h-[250px];
+  @apply px-5 pt-6 pb-4 text-black bg-hd-blue-400 shadow-md bg-clip-border rounded-xl; 
+}
+
+.text-label {
+  @apply text-gray-700 text-sm;
+}
+
+.text-input {
+  @apply p-2 py-1 w-full h-10 rounded-lg shadow-md sm:text-sm; 
+  @apply focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-hd-orange-400;
+}
+
+.error {
+  @apply flex items-center gap-2  bg-slate-300 rounded-md p-1 px-2
 }
