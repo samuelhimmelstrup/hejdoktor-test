@@ -25,12 +25,9 @@ export const StyledListbox = ({ value, options, onChange }: Props<OptionTypes>) 
               key={i}
               value={option}
               className={({ active }) =>
-                clsx(
-                  'relative cursor-default select-none py-2 pl-10 pr-4 text-gray-900',
-                  {
-                    'bg-hd-blue-400 text-hd-darkblue-400': active,
-                  }
-                )
+                clsx('relative cursor-default select-none py-2 pl-10 pr-4 text-black', {
+                  'bg-hd-blue-400 text-black': active,
+                })
               }>
               {({ selected }) => (
                 <>

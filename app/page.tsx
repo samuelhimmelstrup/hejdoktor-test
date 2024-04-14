@@ -24,7 +24,12 @@ export default function Home() {
   return (
     <main className='flex w-full min-h-screen flex-col items-center p-24'>
       {questionnaire && (
-        <div className='flex flex-col items-center gap-10 w-1/2' aria-live='polite'>
+        <motion.div
+          className='flex flex-col items-center gap-10 sm:gap-16 w-1/2'
+          aria-live='polite'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}>
           <h1 className='text-center'>{questionnaire.title}</h1>
 
           {stage === 'questions' && (
@@ -48,18 +53,14 @@ export default function Home() {
             />
           </div>
 
-          <motion.div
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
-            className='custom-card'>
+          <div className='custom-card'>
             {stage === 'introduction' && (
               <>
                 <div>
-                  <h2 className='text-xl mb-2'>{questionnaire?.introductoryMessage}</h2>
-                  <div className='flex gap-1 items-center'>
-                    <p className='text'>{questionnaire?.questions.length} spørgsmål</p>
-                    <p className='text'>
+                  <h2 className='mb-2'>{questionnaire?.introductoryMessage}</h2>
+                  <div className='flex gap-1 items-center text-gray-700'>
+                    <p>{questionnaire?.questions.length} spørgsmål</p>
+                    <p>
                       &bull; Cirka {getEstimatedTime(questionnaire.questions.length)}{' '}
                       minutter
                     </p>
@@ -176,8 +177,8 @@ export default function Home() {
                 </div>
               </>
             )}
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       )}
     </main>
   );
