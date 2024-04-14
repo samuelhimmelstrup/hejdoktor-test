@@ -54,7 +54,7 @@ export const useQuestionnaire = () => {
 
   const handleNavigation = (currentIndex: number, direction: 'next' | 'prev'): void => {
     if (direction == 'next' && currentQuestion?.required && !currentQuestion?.answer) {
-      setInputError('Svar venligst på spørgsmålet');
+      setInputError('Dit svar er nødvendigt for at fortsætte');
       return;
     }
     if (inputError) setInputError('');

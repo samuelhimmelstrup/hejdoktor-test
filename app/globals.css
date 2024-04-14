@@ -59,7 +59,7 @@ h2 {
 }
 
 .custom-card {
-  @apply flex flex-col justify-between gap-5 min-w-[min(600px,95vw)] sm:min-h-[200px] min-h-[250px];
+  @apply flex flex-col justify-between gap-5 w-[min(600px,95vw)] sm:min-h-[220px] min-h-[250px];
   @apply px-5 pt-6 pb-4 text-black bg-hd-blue-400 shadow-md bg-clip-border rounded-xl; 
 }
 
@@ -73,5 +73,5 @@ h2 {
 }
 
 .error {
-  @apply flex items-center gap-2  bg-slate-300 rounded-md p-1 px-2
+  @apply flex items-center gap-2 bg-hd-darkblue-400 rounded-md p-1 px-2 text-white
 }
